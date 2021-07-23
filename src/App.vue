@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Todos/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Todos from './components/Todos.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Todos
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Text', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  font-size: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body{
+  margin:0;
+}
+
+/*FONTS*/
+@font-face {
+   font-family: 'Text-bold';
+   src: url("assets/fonts/Montserrat/Montserrat-Bold.ttf");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Text';
+   src: url("assets/fonts/Montserrat/Montserrat-Regular.ttf");
+   font-display: swap;
 }
 </style>

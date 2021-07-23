@@ -1,24 +1,23 @@
-# todo-list
+# Todo-list
 
-## Project setup
-```
-npm install
-```
+## Informations
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Premier projet avec le Framework Javascript Vue CLI. L'idée est de créer une todo-list. Il est possible d'ajouter, supprimer, modifier une liste. mais aussi de sélectionner/désélectionner une note si la tache est effectuée.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+**date de début :** 22/07/2021
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Auteur
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Développement : Noé PHILIPPE
+
+## Langages :
+
+CSS3, HTML5, Javascript
+
+## Framework
+
+Vue CLI
+
+## Responsive
+
+Oui

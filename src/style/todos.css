@@ -1,0 +1,145 @@
+.header{
+  background-color: teal;
+  margin:0;
+  height: 200px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  color: white;
+  font-size: 5vw;
+  font-family: 'Text-bold'
+}
+
+.new-todo{
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.new-todo-items{
+  display: flex;
+}
+
+.titre, .description{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.titre input, .description input{
+  font-size: 1.3vw;
+  font-family: 'Text';
+  padding: 3px;
+  margin: 10px;
+  border-radius: 10px;
+  border: solid 1px black;
+}
+
+.alert{
+  font-size: 1.2vw;
+  color: rgb(190, 16, 16);
+  height: 20px;
+  margin-top: 20px;
+}
+
+.ajouter input{
+  width: 120px;
+  height: 40px;
+  margin: 30px;
+  background-color: white;
+  box-shadow: none;
+  border: solid 1px black;
+  border-radius: 20px;
+  font-size: 1.2vw;
+
+  transition: all 0.2s;
+}
+
+.ajouter input:hover{
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+  border: solid 1px white;
+}
+
+.todo{
+  height: 150px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  border-top: solid 1px black;
+  text-align: left;
+}
+
+button{
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 50%;
+  margin-right: 50px;
+  position: relative;
+
+  transition: all 0.2s;
+}
+
+button.checked{
+  background-color: teal;
+  border: solid 1px white;
+}
+
+button::after{
+  display: block;
+  content: '✓';
+  position: absolute;
+
+  font-size: 3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+
+
+  transition: opacity 0.2s;
+  transition-delay: 0.3s;
+}
+
+button:active::after{
+  font-size: 2em;
+
+  transition: all 0.2s;
+}
+
+button:hover{
+  background-color: teal;
+  cursor: pointer;
+  border: solid 1px white;
+}
+
+button:hover::after, button.checked::after {
+  opacity: 1;
+}
+
+.todo-item{
+  width: 75%;
+}
+
+h2{
+  margin:0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+p{
+  max-height: 100px;
+  overflow-y: scroll;
+  margin: 0;
+}

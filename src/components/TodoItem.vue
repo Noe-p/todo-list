@@ -1,17 +1,16 @@
 <template>
-  <div class="todo">
+  <div v-for="todo in todos" :key="todo.titre" class="todo" >
     <button></button>
     <div class="todo-item">
-      <h2>titre</h2>
-      <p>Ceci est une description</p>
+      <h2>{{ todo.titre }}</h2>
+      <p>{{ todo.description }}</p>
     </div>
   </div>
-
 </template>
 
 <script>
 export default {
-  name: 'TodoItem'
+  name: 'TodoItem',
 }
 </script>
 

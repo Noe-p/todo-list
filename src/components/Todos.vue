@@ -111,23 +111,32 @@ export default {
     editTodo(todo){
       let titre = document.querySelector('input[name="titreEdit"]').value;
       let description = document.querySelector('textarea[name="descriptionEdit"]').value;
-      let alert = document.querySelector('.alertEdit');
 
-      if(titre != ""){
-        if(description != ""){
-          this.todos.splice(this.todos.indexOf(todo),1,{
-            checked: 0,
-            titre: titre,
-            description: description
-          });
-        } else {
-          alert.setAttribute("style", "color: rgb(190, 16, 16)");
-          alert.textContent = "Veuiller entrer une description..."
-        }
-      } else {
-        alert.setAttribute("style", "color: rgb(190, 16, 16)");
-        alert.textContent = "Veuiller entrer un titre..."
+
+      if(description != "" && titre != ""){
+        this.todos.splice(this.todos.indexOf(todo),1,{
+          checked: 0,
+          titre: titre,
+          description: description
+        });
       }
+      if(description == "") {
+        this.todos.splice(this.todos.indexOf(todo),1,{
+          checked: 0,
+          titre: titre,
+          description: todo.description
+        });
+      }
+      if(titre == "") {
+        this.todos.splice(this.todos.indexOf(todo),1,{
+          checked: 0,
+          titre: todo.titre,
+          description: description
+        });
+      }
+      document.querySelector('input[name="titreEdit"]').value = "";
+      document.querySelector('textarea[name="descriptionEdit"]').value = "";
+
     }
 
   }
